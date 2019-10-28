@@ -1,4 +1,35 @@
 # worker-sites-pwa-template
-CloudFlare Worker Sites template updated to pass Lighthouse PWA Audit
+A CloudFlare Worker Sites template updated to pass the Chrome Lighthouse PWA Audit
 
 ![Lighthouse Audit](/chrome_lighthouse_audit.png)
+
+##Usage
+
+```bash
+git clone https://github.com/temarsden/worker-sites-pwa-template.git
+```
+install [`wrangler`](https://github.com/cloudflare/wrangler).
+
+### Install with `npm`
+
+```bash
+npm i @cloudflare/wrangler -g
+```
+
+### Install with `cargo`
+
+```bash
+cargo install wrangler
+```
+
+### Enter your CloudFlare Workers Account ID in wrangler.toml
+
+```bash
+account_id = "<your-cloudflare-workers-account-id>"
+```
+
+### Publish
+
+```bash
+wrangler publish
+```
