@@ -3,6 +3,7 @@ A CloudFlare Worker Sites template updated to pass the Chrome Lighthouse PWA Aud
 
 ![Lighthouse Audit](/chrome_lighthouse_audit.png)
 
+An example site can be viewed [here.](https://worker-site-pwa-template.tmarsden.workers.dev/)
 ## Usage
 
 clone
