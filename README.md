@@ -11,7 +11,7 @@ git clone https://github.com/temarsden/worker-sites-pwa-template.git
 ```
 install [`wrangler`](https://github.com/cloudflare/wrangler).
 
-### ...with `npm`
+### ... with `npm`
 
 ```bash
 npm i @cloudflare/wrangler -g
