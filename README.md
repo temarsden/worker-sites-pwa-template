@@ -3,20 +3,21 @@ A CloudFlare Worker Sites template updated to pass the Chrome Lighthouse PWA Aud
 
 ![Lighthouse Audit](/chrome_lighthouse_audit.png)
 
-##Usage
+## Usage
 
+clone
 ```bash
 git clone https://github.com/temarsden/worker-sites-pwa-template.git
 ```
 install [`wrangler`](https://github.com/cloudflare/wrangler).
 
-### Install with `npm`
+### ...with `npm`
 
 ```bash
 npm i @cloudflare/wrangler -g
 ```
 
-### Install with `cargo`
+### ... or with `cargo`
 
 ```bash
 cargo install wrangler
