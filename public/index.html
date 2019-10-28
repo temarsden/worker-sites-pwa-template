@@ -1,14 +1,21 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#F74C00" />
+        <meta name="Description" content="CloudFlare worker-site-pwa-template">
+        <title>CloudFlare worker-site-pwa-template</title>
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="apple-touch-icon" href="img/icon-192x192.png">
+        <link rel="manifest" href="manifest.json">
+        <link rel="script" href="serviceworker.js">
         <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet"/>
         <style>
             h1 {
                 font-family: Pacifico, sans-serif;
                 font-size: 4em;
-                color: #3eb5f1;
+                color: black;
                 margin: 0;
             }
 
@@ -19,6 +26,7 @@
 
             .centered {
                 position: fixed;
+                width: 100%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -33,8 +41,21 @@
     <body>
         <div class="centered">
             <h1>200 Success</h1>
-            <h2>Hello World! Welcome to your Workers Site.</h2>
-            <img id="ferris" alt-text="a happy crab is wearing a cowboy hat and holding a lasso. 200 success." src="./img/200-wrangler-ferris.gif" />
+            <h2>Hello World! Welcome to your Workers PWA Site.</h2>
+            <img id="ferris" alt="ferris" alt-text="a happy crab is wearing a cowboy hat and holding a lasso. 200 success." src="./img/200-wrangler-ferris.gif" />
         </div>
+        <script>
+                if ('serviceWorker' in navigator) {
+                    window.addEventListener('load', function() {
+                        navigator.serviceWorker.register('/serviceworker.js').then(function(registration) {
+                            // Registration was successful
+                            console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                        }, function(err) {
+                            // registration failed :(
+                            console.log('ServiceWorker registration failed: ', err);
+                        });
+                    });
+                }
+            </script>
     </body>
 </html>
